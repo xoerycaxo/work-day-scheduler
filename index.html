@@ -26,12 +26,12 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead"></p>
+      <p id="currentDay" class="lead">Mon, Jul 18th 22</p>
     </header>
 
     <!-- Main Schedule Section Start -->
     <section class="container">
-      <!-- Timeblocks go here, Will be adding times from 9am till 5pm (really wish the work day was acutally 9 to 5pm) -->
+      <!-- Timeblocks go here, Will be adding times from 9am till 5pm -->
       
       <div class="row">
         <!-- using bootstrap input group for adding group to both sides of text box -->
@@ -41,7 +41,7 @@
               <span class="input-group-text">09:00am</span>
             </div>
             <!-- adding text area with bootstrap class form-control for better custom styling -->
-            <textarea class="form-control" id="9am"></textarea>
+            <textarea class="form-control past" id="9am"></textarea>
             <!-- adding button and will be using the fontawesome id for bookmark to mark as the save option in the script.js  -->
             <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
@@ -52,7 +52,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">10:00am</span>
           </div>
-          <textarea class="form-control" id="10am"></textarea>
+          <textarea class="form-control past" id="10am"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -60,7 +60,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">11:00am</span>
           </div>
-          <textarea class="form-control" id="11am"></textarea>
+          <textarea class="form-control present" id="11am"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -68,7 +68,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">12:00pm</span>
           </div>
-          <textarea class="form-control" id="12pm"></textarea>
+          <textarea class="form-control future" id="12pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -76,7 +76,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text"> 01:00pm</span>
           </div>
-          <textarea class="form-control" id="1pm"></textarea>
+          <textarea class="form-control future" id="1pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -84,7 +84,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">02:00pm</span>
           </div>
-          <textarea class="form-control" id="2pm"></textarea>
+          <textarea class="form-control future" id="2pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -92,7 +92,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">03:00pm</span>
           </div>
-          <textarea class="form-control" id="3pm"></textarea>
+          <textarea class="form-control future" id="3pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -100,7 +100,7 @@
           <div class="input-group-prepend">
             <span class="input-group-text">04:00pm</span>
           </div>
-          <textarea class="form-control" id="4pm"></textarea>
+          <textarea class="form-control future" id="4pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
 
@@ -108,11 +108,10 @@
           <div class="input-group-prepend">
             <span class="input-group-text">05:00pm</span>
           </div>
-          <textarea class="form-control" id="5pm"></textarea>
+          <textarea class="form-control future" id="5pm"></textarea>
           <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
         </div>
       </div>
-
     </section>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
