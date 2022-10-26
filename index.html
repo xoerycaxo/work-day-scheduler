@@ -1,121 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Work Day Scheduler</title>
-  </head>
 
-  <body>
-    <header class="jumbotron">
-      <h1 class="display-3">Work Day Scheduler</h1>
-      <p class="lead">A simple calendar app for scheduling your work day</p>
-      <p id="currentDay" class="lead">Mon, Jul 18th 22</p>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Work Day Scheduler</title>
+</head>
 
-    <!-- Main Schedule Section Start -->
-    <section class="container">
-      <!-- Timeblocks go here, Will be adding times from 9am till 5pm -->
-      
-      <div class="row">
-        <!-- using bootstrap input group for adding group to both sides of text box -->
-        
-        <div class="input-group">
-            <div class="input-group-prepend">
-              <span class="input-group-text">09:00am</span>
-            </div>
-            <!-- adding text area with bootstrap class form-control for better custom styling -->
-            <textarea class="form-control past" id="9am"></textarea>
-            <!-- adding button and will be using the fontawesome id for bookmark to mark as the save option in the script.js  -->
-            <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-        
-        <!-- replicating html for the rest of the hours in the work day but will be changing the id in the test area -->
-        
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">10:00am</span>
-          </div>
-          <textarea class="form-control past" id="10am"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
+<body>
+  <header class="jumbotron">
+    <h1 class="display-3">Work Day Scheduler</h1>
+    <p class="lead">A simple calendar app for scheduling your work day</p>
+    <p id="currentDay" class="lead"></p>
+  </header>
+  <div class="container">
+    <!-- Timeblocks -->
+    <div class="row time-block" data-hour="9">
+      <div class="col-2 col-lg-1 hour">9 am</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="10">
+      <div class="col-2 col-lg-1 hour">10 am</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
 
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">11:00am</span>
-          </div>
-          <textarea class="form-control present" id="11am"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
+    </div>
+    <div class="row time-block" data-hour="11">
+      <div class="col-2 col-lg-1 hour">11 am</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="12">
+      <div class="col-2 col-lg-1 hour">12 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="13">
+      <div class="col-2 col-lg-1 hour">1 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="14">
+      <div class="col-2 col-lg-1 hour">2 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="15">
+      <div class="col-2 col-lg-1 hour">3 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="16">
+      <div class="col-2 col-lg-1 hour">4 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class=" col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+    <div class="row time-block" data-hour="17">
+      <div class="col-2 col-lg-1 hour">5 pm</div>
+      <textarea class="col-8 col-lg-10"></textarea>
+      <button class="col-2 col-lg-1 btn btn-block saveBtn d-flex justify-content-center align-items-center">
+        <i class="fas fa-save"></i>
+      </button>
+    </div>
+  </div>
 
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">12:00pm</span>
-          </div>
-          <textarea class="form-control future" id="12pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="./assets/js/script.js"></script>
+</body>
 
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text"> 01:00pm</span>
-          </div>
-          <textarea class="form-control future" id="1pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">02:00pm</span>
-          </div>
-          <textarea class="form-control future" id="2pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">03:00pm</span>
-          </div>
-          <textarea class="form-control future" id="3pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">04:00pm</span>
-          </div>
-          <textarea class="form-control future" id="4pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-
-        <div class="input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">05:00pm</span>
-          </div>
-          <textarea class="form-control future" id="5pm"></textarea>
-          <button type="button" class="saveBtn"><i class="fas fa-solid fa-bookmark"></i></button>
-        </div>
-      </div>
-    </section>
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="./assets/js/script.js"></script>
-  </body>
 </html>
